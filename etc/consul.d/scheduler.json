@@ -7,7 +7,6 @@
                     "script" : "/usr/local/bin/healthcheck.sh",
                     "interval" : "5s"
                 }
-
             ]
         }
     ]
