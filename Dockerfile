@@ -1,4 +1,4 @@
-FROM jasonchw/alpine-consul
+FROM jasonchw/alpine-consul:0.7.0
 
 ARG CURATOR_VER=4.1.2
 ARG SCHEDULER_DIR=/etc/periodic/daily
