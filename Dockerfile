@@ -1,6 +1,6 @@
 FROM jasonchw/alpine-consul:0.7.0
 
-ARG CURATOR_VER=4.1.2
+ARG CURATOR_VER=4.2.6
 ARG SCHEDULER_DIR=/etc/periodic/daily
 
 RUN apk update && apk upgrade && \
@@ -9,13 +9,10 @@ RUN apk update && apk upgrade && \
     pip install -U elasticsearch-curator==${CURATOR_VER} && \
     rm -rf /var/cache/apk/* && \
     rm /etc/consul.d/consul-ui.json && \
-    mkdir -p /etc/periodic/perminute && \
     mkdir -p /var/log/curator
 
 COPY etc/consul.d/scheduler.json /etc/consul.d/
 
-COPY crontab      /etc/crontabs/root
-COPY etc/curator/ /etc/curator/
 # do not put file extensions on script name, otherwise it will not run
 COPY run-curator  ${SCHEDULER_DIR}/run-curator
 
