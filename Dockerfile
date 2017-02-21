@@ -11,7 +11,7 @@ RUN apk update && apk upgrade && \
     rm /etc/consul.d/consul-ui.json && \
     mkdir -p /var/log/curator
 
-COPY etc/consul.d/scheduler.json /etc/consul.d/
+COPY etc/consul.d/curator.json /etc/consul.d/
 
 # do not put file extensions on script name, otherwise it will not run
 COPY run-curator  ${SCHEDULER_DIR}/run-curator

@@ -1,0 +1,14 @@
+{
+    "services" : [{
+            "id" : "curator",
+            "name" : "curator",
+            "tags" : [],
+            "checks" : [{
+                    "script" : "/usr/local/bin/healthcheck.sh",
+                    "interval" : "5s"
+                }
+            ]
+        }
+    ]
+}
+
