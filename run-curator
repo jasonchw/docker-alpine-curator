@@ -1,4 +1,4 @@
 #!/bin/sh
 
-curator --config /etc/curator/curator.yml /etc/curator/action.yml
+curator --config /etc/curator/conf.d/curator.yml /etc/curator/conf.d/action.yml
 
